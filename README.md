@@ -95,4 +95,6 @@ Download: <a href="https://github.com/woodboye/harbinger/releases/download/v1.0/
 
 ---
 
-<br>
+<a href="https://www.gnu.org/software/emacs/">
+  <img width="150" height="auto" src="emacs.png" title="Get Emacs">
+</a>
