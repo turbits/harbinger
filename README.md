@@ -16,8 +16,7 @@ Tweeter: <a href="https://twitter.com/woodboye">@woodboye</a>
 <br>
 Feel free to suggest additions.
 <br>
-<!-- Download: harbinger_v1.0.0 -->
-<!-- <br> -->
+Download: <a href="https://github.com/woodboye/harbinger/releases/download/v1.0/harbinger.ahk"><b>Harbinger_v1.0</b></a>
 
 ---
 
