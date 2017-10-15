@@ -20,6 +20,20 @@ Download: <a href="https://github.com/woodboye/harbinger/releases/download/v1.0/
 
 ---
 
+##### Installation:
+
+1. Download <a href="https://autohotkey.com/">AutoHotkey</a>
+2. Download Harbinger.ahk
+3. Double click Harbinger.ahk
+
+---
+
+##### Config:
+
+1. Open Harbinger.ahk with your favourite editor
+2. Find & Replace or manually replace all instances of *my* name with *your* name
+
+---
   Command | Result
   ---- | ----
   **Caret** |
