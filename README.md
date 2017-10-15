@@ -8,7 +8,7 @@
 
 The autohotkey script to rule all autohotkey scripts.
 
-Version: 1.0.0
+Version: 1.0
 <br>
 Date: 2017-10-15
 <br>
