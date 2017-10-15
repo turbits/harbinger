@@ -2,7 +2,7 @@
 ;
 ; author: Trevor Woodman
 ; date: 2017-10-15
-; revision: 1.0.0
+; revision: 1.0
 ; tested:
 ;   - Windows 10.0.15603
 ;   - Emacs 25.2.1 (x86_64-w64-mingw32)
