@@ -36,7 +36,7 @@ Feel free to suggest additions.
   **Utility** |
   ~+d | Insert current date YYYY-MM-DD
   ~+t | Insert current time HH:MM:SS
-  **Programming** |
+  **Programming** | *Most are personalized*
   =todo | Insert personalized TODO
   =note | Insert personalized NOTE
   =com | Insert comment block
