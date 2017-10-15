@@ -91,5 +91,4 @@ Return
   Send, :%A_Space%%A_Space%%A_Space% Author:%A_Space%Trevor Woodman`n
   Send, :%A_Space%%A_Space%%A_Space% Notice: (C) Copyright %A_YYYY% by Trevor Woodman`n
   Send, %A_Space%%A_Space%%A_Space%`================================================== */`n
-  Send,{BackSpace 2}
 Return
