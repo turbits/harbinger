@@ -3,6 +3,7 @@
 </p>
 
 <p align="center"><b>H A R B I N G E R</b></p>
+
 ---
 
 The autohotkey script to rule all autohotkey scripts.
