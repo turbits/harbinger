@@ -1,94 +1,101 @@
 ; harbinger.ahk
 ;
 ; author: Trevor Woodman
-; date: 2017-10-15
+; date authored: 15-10-2017
 ; revision: 1.0
+; latest revision: 1.1 (11-11-2018)
 ; tested:
-;   - Windows 10.0.15603
-;   - Emacs 25.2.1 (x86_64-w64-mingw32)
-; config: be sure to replace my name with yours
-;   so the personalized hotkeys have your name.
+;   - Windows 10, Version 1803, Build 17134.345
+; config: be sure to replace the variable 'USERNAME' with your name instead of mine. :^)
 ;
 ; ==== CONFIG ====
+#NoEnv
+SendMode Input
+SetWorkingDir %A_ScriptDir%
 #SingleInstance FORCE
+USERNAME := "Trevor Woodman"
 
 ; ==== ARROW KEYS ====
-; home [ctrl+left]
+; home, [ctrl+left]
 ^Left::
-    Send,{Home}
+	Send,{Home}
 Return
 
-; end [ctrl+right]
+; end, [ctrl+right]
 ^Right::
-  Send,{End}
+	Send,{End}
 Return
 
-; select + home [ctrl+shift+left]
-^+Left::
-  Send,{Shift down}{Home}{Shift up}
-Return
-
-; select + end [ctrl+shift+right]
-^+Right::
-  Send,{Shift down}{End}{Shift up}
-Return
-
-; page up [ctrl+up]
+; page up, [ctrl+up]
 ^Up::
-  Send,{PgUp}
+	Send,{PgUp}
 Return
 
-; page down [ctrl+down]
+; page down, [ctrl+down]
 ^Down::
-  Send,{PgDn}
+	Send,{PgDn}
 Return
 
-; select + pg up [ctrl+shift+up]
+; select + home, [ctrl+shift+left]
+^+Left::
+	Send,{Shift down}{Home}{Shift up}
+Return
+
+; select + end, [ctrl+shift+right]
+^+Right::
+	Send,{Shift down}{End}{Shift up}
+Return
+
+; select + pg up, [ctrl+shift+up]
 ^+Up::
 	Send,{Shift down}{PgUp}{Shift up}
 Return
 
-; select + pg down [ctrl+shift+down]
+; select + pg down, [ctrl+shift+down]
 ^+Down::
 	Send,{Shift down}{PgDn}{Shift up}
 Return
 
 ; ==== UTILITY ====
-; insert current date YYYY-MM-DD [tilde(~)+d]
+; insert current date DD-MM-YYYY, [tilde(~)+d]
 ::~d::
-	Send %A_YYYY%-%A_MM%-%A_DD%
+	Send,%A_DD%-%A_MM%-%A_YYYY%
 Return
 
 ; insert current 24hr time to second, HH:MM:SS [tilde(~)+t]
 ::~t::
-	Send %A_Hour%:%A_Min%:%A_Sec%
+	Send,%A_Hour%:%A_Min%:%A_Sec%
 Return
 
-; ==== PROGRAMMING/DEVELOPMENT/EMACS ====
-; insert personalized TODO
+; ==== DEVELOPMENT ====
+; Change the USERNAME variable at the top of the file!
+; insert TODO comment, [=+todo]
 ::=todo::
-  Send // TODO(trevor):%A_Space%
+	Send,// TODO(%USERNAME%):%A_Space%
 Return
 
-; insert personalized NOTE
+; insert FIXME comment, [=+fixme]
+::=fixme::
+	Send,// FIXME(%USERNAME%):%A_Space%
+Return
+
+; insert HACK comment, [=+hack]
+::=hack::
+	Send,// HACK(%USERNAME%):%A_Space%
+Return
+
+; insert NOTE comment, [=+note]
 ::=note::
-  Send // NOTE(trevor):%A_Space%
+	Send,// NOTE(%USERNAME%):%A_Space%
 Return
 
-; insert .emacs comment block
-::=com::
-	Send `;`; ==== BEGIN XXXX ====`r`n
-	Send `;`; ==== END XXXX ====
-	Send,{up 1}
-Return
-
-; insert header comment block (c++)
-::=bcom::
-  Send, /* ==================================================`n
-  Send, :%A_Space%%A_Space%%A_Space% File:%A_Space%<FILENAME>`n
-  Send, :%A_Space%%A_Space%%A_Space% Date:%A_Space%%A_YYYY%-%A_MM%-%A_DD%`n
-  Send, :%A_Space%%A_Space%%A_Space% Revision:%A_Space%1.0.0`n
-  Send, :%A_Space%%A_Space%%A_Space% Author:%A_Space%Trevor Woodman`n
-  Send, :%A_Space%%A_Space%%A_Space% Notice: (C) Copyright %A_YYYY% by Trevor Woodman`n
-  Send, %A_Space%%A_Space%%A_Space%`================================================== */`n
+; insert file head comment block (C++, C#, etc), [=+hcom]
+::=hcom::
+	Send,/* ================================================== `n
+	Send,:%A_Space% File:%A_Space%FILENAME `n
+	Send,:%A_Space% Date:%A_Space%%A_DD%-%A_MM%-%A_YYYY% `n
+	Send,:%A_Space% Revision:%A_Space%1.0.0 `n
+	Send,:%A_Space% Author:%A_Space%%USERNAME% `n
+	Send,:%A_Space% Notice: Copyright (C) %A_YYYY% by %USERNAME% `n
+	Send,%A_Space%%A_Space%%A_Space%`================================================== */ `n
 Return
