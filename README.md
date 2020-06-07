@@ -84,8 +84,6 @@ Command | Result
 
 ---
 
-<br>
-
 ##### ~d / ~df / ~t / ~dt / ~dft
 ```
 11-11-2018
