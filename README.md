@@ -6,7 +6,7 @@
 
 ---
 
-An AHK script that provides some quality of life shortcuts. Suggestions welcome.
+An AHK script that provides some quality of life shortcuts.
 
 Current Version: 1.2
 <br>
