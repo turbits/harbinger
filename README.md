@@ -14,8 +14,6 @@ Authored Date: 15-10-2017
 <br>
 Last Update: 07-06-2020
 <br>
-Website: <a href="https://trevorwoodman.ca" target="_blank">trevorwoodman.ca</a>
-<br>
 Latest Release: <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Harbinger_v1.2</b></a>
 <br>
 Old Releases:
@@ -99,7 +97,3 @@ Command | Result
 ```
 
 ---
-
-<a href="https://trevorwoodman.ca">
-  <img width="250" height="auto" src="t.png" target="_blank">
-</a>
