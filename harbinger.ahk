@@ -1,14 +1,16 @@
 ; harbinger.ahk
 ;
-; author: Trevor Woodman
+; author: @turbits
 ; date authored: 15-10-2017
-; revision: 1.2
+; revision: 1.3
 ; revisions:
-;    - 1.2 (07-06-2020)
 ;    - 1.1 (11-11-2018)
+;    - 1.2 (07-06-2020)
+;    - 1.3 (08-10-2021)
 ; tested:
 ;    - Windows 10, Version 1803, Build 17134.345
 ;    - Windows 10, Version 1909
+;    - Windows 10, Version 21H1, Build 19043
 ; config:
 ;    - Change USERNAME to an identifier you want to use on TODOs, etc.
 ;
@@ -42,6 +44,12 @@ Return
 ; insert full datetime string, DD-MM-YYYY HH:MM:SS [tilde(~)+dt]
 ::~dt::
 	Send,%A_DD%-%A_MM%-%A_YYYY% %A_Hour%:%A_Min%:%A_Sec%
+Return
+
+; insert full datetime string UTC (I use this in MySQL), YYYY-MM-DD HH:MM:SS [tilde(~)+dz]
+::~dz::
+	FormatTime, vDateStamp, %A_NowUTC%, yyyy-M-dd HH:mm:ss
+	Send,%vDateStamp%
 Return
 
 ; insert full datetime string (fancy), DD MMMM YYYY HH:MM:SS [tilde(~)+dft]

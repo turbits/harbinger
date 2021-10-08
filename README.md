@@ -8,15 +8,17 @@
 
 An AHK script that provides some quality of life shortcuts.
 
-Current Version: 1.2
+Current Version: 1.3
 <br>
 Authored Date: 15-10-2017
 <br>
-Last Update: 07-06-2020
+Last Update: 08-10-2021
 <br>
-Latest Release: <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Harbinger_v1.2</b></a>
+Latest Release: <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Harbinger_v1.3</b></a>
 <br>
 Old Releases:
+<br>
+-> <a href="https://github.com/turbits/harbinger/releases/tag/v1.2" target="_blank">Harbinger_v1.2</a>
 <br>
 -> <a href="https://github.com/turbits/harbinger/releases/tag/v1.1" target="_blank">Harbinger_v1.1</a>
 <br>
@@ -43,7 +45,6 @@ Old Releases:
 8. Click `New...`
 9. Add triggers for whenever you want the script to run. Mine are:
     - At log on
-    - At startup
     - On workstation unlock
 10. On all triggers, make sure `Enabled` is CHECKED.
 11. Click the `Actions` tab at the top
@@ -71,6 +72,7 @@ Command | Result
 **Utility** |
 ~d | Insert current date DD-MM-YYYY
 ~df | Insert current date (fancy) DD MMMM YYYY
+~dz | Insert current datetime stamp, YYYY-MM-DD HH:MM:SS
 ~t | Insert current time HH:MM:SS
 ~dt | Insert current datetime DD-MM-YYYY HH:MM:SS
 ~dft | Insert current datetime (fancy) DD MMMM YYYY HH:MM:SS
@@ -82,10 +84,11 @@ Command | Result
 
 ---
 
-##### ~d / ~df / ~t / ~dt / ~dft
+##### ~d / ~df / ~dz / ~t / ~dt / ~dft
 ```
 11-11-2018
 11 November 2018
+2021-10-08 20:16:58
 11:25:05
 07-06-2020 13:38:16
 07 June 2020 13:39:26
