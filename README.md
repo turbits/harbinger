@@ -8,17 +8,14 @@
 
 An AHK script that provides some quality of life shortcuts.
 
-Current Version: 1.4.2
+Current Version: 1.5
 <br>
 Authored Date: 15-10-2017
 <br>
 Last Update: 12-10-2021
 <br>
-Latest Release: <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Harbinger_v1.4.2</b></a>
+<a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Releases</b></a>
 <br>
-Old Releases:
-<br>
--> <a href="https://github.com/turbits/harbinger/releases" target="_blank">Releases Page</a>
 <br>
 
 ---
@@ -26,7 +23,7 @@ Old Releases:
 ##### Installation:
 
 1. Download <a href="https://autohotkey.com/" target="_blank">AutoHotkey</a>
-2. Download Harbinger
+2. <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank">Download Harbinger</a>
 3. Double click "harbinger.ahk"
 
 ---
