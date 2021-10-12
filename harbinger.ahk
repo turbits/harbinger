@@ -10,7 +10,7 @@
 ;
 ; author: @turbits
 ; date authored: 15-10-2017
-; revision: 1.4
+; revision: 1.4.1 (12-10-2021)
 ; revisions:
 ;    - https://github.com/turbits/harbinger/releases
 ; tested:
@@ -29,79 +29,79 @@ SetWorkingDir %A_ScriptDir%
 USERNAME := "trevor"
 
 ; ==== ARROW KEYS ====
-; I removed most of the functionality here.
-; For all of the the Ctrl/Shift/Arrow key functionality revert to 1.1
+; I removed some of the functionality here.
+; For all of the the arrow key functionality revert to 1.1
 ; ----
-; home, [ctrl+left]
-^Left::
+; home; [alt+left]
+!Left::
 	Send,{Home}
 Return
 
-; end, [ctrl+right]
-^Right::
-	Send,{Home}
+; end; [alt+right]
+!Right::
+	Send,{End}
 Return
 
-; select + home, [ctrl+shift+left]
-^+Left::
+; select + home; [alt+shift+left]
+!+Left::
 	Send,{Shift down}{Home}{Shift up}
 Return
 
-; select + end, [ctrl+shift+right]
-^+Right::
-	Send,{Shift down}{Home}{Shift up}
+; select + end; [alt+shift+right]
+!+Right::
+	Send,{Shift down}{End}{Shift up}
 Return
 
 ; ==== UTILITY ====
-; insert current date DD-MM-YYYY, [tilde(~)+d]
-:*:~d::
+; insert current date DD-MM-YYYY; [tilde(~)+d]
+:*:~da::
 	Send,%A_DD%-%A_MM%-%A_YYYY%
 Return
 
-; insert fancy date DD MMMM YYYY
+; insert fancy date DD MMMM YYYY; [tilde(~)+df]
 :*:~df::
 	Send,%A_DD% %A_MMMM% %A_YYYY%
 Return
 
-; insert current 24hr time to second, HH:MM:SS [tilde(~)+t]
-:*:~t::
+; insert current 24hr time to second; HH:MM:SS [tilde(~)+t]
+:*:~ti::
 	Send,%A_Hour%:%A_Min%:%A_Sec%
 Return
 
-; insert full datetime string, DD-MM-YYYY HH:MM:SS [tilde(~)+dt]
+; insert full datetime string, DD-MM-YYYY HH:MM:SS; [tilde(~)+dt]
 :*:~dt::
 	Send,%A_DD%-%A_MM%-%A_YYYY% %A_Hour%:%A_Min%:%A_Sec%
 Return
 
-; insert full datetime string UTC (I use this in MySQL), YYYY-MM-DD HH:MM:SS [tilde(~)+dz]
+; insert full datetime string UTC (I use this in MySQL); YYYY-MM-DD HH:MM:SS [tilde(~)+dz]
 :*:~dz::
 	FormatTime, vDateStamp, %A_NowUTC%, yyyy-M-dd HH:mm:ss
 	Send,%vDateStamp%
 Return
 
-; insert full datetime string (fancy), DD MMMM YYYY HH:MM:SS [tilde(~)+dft]
+; insert full datetime string (fancy), DD MMMM YYYY HH:MM:SS; [tilde(~)+dft]
 :*:~dft::
 	Send,%A_DD% %A_MMMM% %A_YYYY% %A_Hour%:%A_Min%:%A_Sec%
 Return
 
 ; ==== DEVELOPMENT ====
 ; Change the USERNAME variable at the top of the file!
-; insert TODO comment, [=+todo]
+; insert TODO comment; [=+todo]
 :*:=todo::
 	Send,// TODO(%USERNAME%):%A_Space%
 Return
 
-; insert FIXME comment, [=+fixme]
+; insert FIXME comment; [=+fixme]
 :*:=fixme::
 	Send,// FIXME(%USERNAME%):%A_Space%
 Return
 
-; insert HACK comment, [=+hack]
+; insert HACK comment; [=+hack]
 :*:=hack::
 	Send,// HACK(%USERNAME%):%A_Space%
 Return
 
-; insert NOTE comment, [=+note]
+; insert NOTE comment; [=+note]
 :*:=note::
 	Send,// NOTE(%USERNAME%):%A_Space%
 Return

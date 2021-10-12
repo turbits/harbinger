@@ -8,21 +8,18 @@
 
 An AHK script that provides some quality of life shortcuts.
 
-Current Version: 1.3
+Current Version: 1.4.1
 <br>
 Authored Date: 15-10-2017
 <br>
-Last Update: 08-10-2021
+Last Update: 12-10-2021
 <br>
-Latest Release: <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Harbinger_v1.3</b></a>
+Latest Release: <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Harbinger_v1.4.1</b></a>
 <br>
 Old Releases:
 <br>
--> <a href="https://github.com/turbits/harbinger/releases/tag/v1.2" target="_blank">Harbinger_v1.2</a>
+-> <a href="https://github.com/turbits/harbinger/releases" target="_blank">Releases Page</a>
 <br>
--> <a href="https://github.com/turbits/harbinger/releases/tag/v1.1" target="_blank">Harbinger_v1.1</a>
-<br>
--> <a href="https://github.com/turbits/harbinger/releases/tag/v1.0" target="_blank">Harbinger_v1.0</a>
 
 ---
 
@@ -84,14 +81,24 @@ Command | Result
 
 ---
 
-##### ~d / ~df / ~dz / ~t / ~dt / ~dft
+Hotkey | Result
+---- | ----
+**Arrow Functions** |
+Alt+Left | Home (move cursor to beginning of line)
+Alt+Right | End (move cursot to end of line)
+Alt+Shift+Left | Select+Home (select all text from cursor position to beginning of line)
+Alt+Shift+Right | Select+End (select all text from cursor position to end of line)
+
+---
+
+##### ~da / ~df / ~dz / ~ti / ~dt / ~dft
 ```
-11-11-2018
-11 November 2018
-2021-10-08 20:16:58
-11:25:05
-07-06-2020 13:38:16
-07 June 2020 13:39:26
+~da: 11-11-2018
+~df: 11 November 2018
+~dz: 2021-10-08 20:16:58
+~ti: 11:25:05
+~dt: 07-06-2020 13:38:16
+~dft: 07 June 2020 13:39:26
 ```
 
 ##### =todo / =fixme / =hack / =note
