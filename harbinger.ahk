@@ -10,7 +10,7 @@
 ;
 ; author: @turbits
 ; date authored: 15-10-2017
-; revision: 1.4.2 (12-10-2021)
+; revision: 1.5 (12-10-2021)
 ; revisions:
 ;    - https://github.com/turbits/harbinger/releases
 ; tested:
