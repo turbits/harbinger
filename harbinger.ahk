@@ -10,7 +10,7 @@
 ;
 ; author: @turbits
 ; date authored: 15-10-2017
-; revision: 1.4.1 (12-10-2021)
+; revision: 1.4.2 (12-10-2021)
 ; revisions:
 ;    - https://github.com/turbits/harbinger/releases
 ; tested:
@@ -53,7 +53,7 @@ Return
 Return
 
 ; ==== UTILITY ====
-; insert current date DD-MM-YYYY; [tilde(~)+d]
+; insert current date DD-MM-YYYY; [tilde(~)+da]
 :*:~da::
 	Send,%A_DD%-%A_MM%-%A_YYYY%
 Return
@@ -63,9 +63,14 @@ Return
 	Send,%A_DD% %A_MMMM% %A_YYYY%
 Return
 
-; insert current 24hr time to second; HH:MM:SS [tilde(~)+t]
-:*:~ti::
+; insert current 24hr time to second; HH:MM:SS [tilde(~)+tt]
+:*:~tt::
 	Send,%A_Hour%:%A_Min%:%A_Sec%
+Return
+
+; insert current 24hr time to minute; HH:MM [tilde(~)+tr]
+:*:~tr::
+	Send,%A_Hour%:%A_Min%
 Return
 
 ; insert full datetime string, DD-MM-YYYY HH:MM:SS; [tilde(~)+dt]

@@ -8,13 +8,13 @@
 
 An AHK script that provides some quality of life shortcuts.
 
-Current Version: 1.4.1
+Current Version: 1.4.2
 <br>
 Authored Date: 15-10-2017
 <br>
 Last Update: 12-10-2021
 <br>
-Latest Release: <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Harbinger_v1.4.1</b></a>
+Latest Release: <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Harbinger_v1.4.2</b></a>
 <br>
 Old Releases:
 <br>
@@ -67,10 +67,11 @@ Old Releases:
 Command | Result
 ---- | ----
 **Utility** |
-~d | Insert current date DD-MM-YYYY
+~da | Insert current date DD-MM-YYYY
 ~df | Insert current date (fancy) DD MMMM YYYY
 ~dz | Insert current datetime stamp, YYYY-MM-DD HH:MM:SS
-~t | Insert current time HH:MM:SS
+~tt | Insert current 24hr time to second HH:MM:SS
+~tr | Insert current 24hr time to minute HH:MM
 ~dt | Insert current datetime DD-MM-YYYY HH:MM:SS
 ~dft | Insert current datetime (fancy) DD MMMM YYYY HH:MM:SS
 **Development** | **Change "USERNAME" var!**
@@ -91,14 +92,17 @@ Alt+Shift+Right | Select+End (select all text from cursor position to end of lin
 
 ---
 
+# Examples
+
 ##### ~da / ~df / ~dz / ~ti / ~dt / ~dft
 ```
-~da: 11-11-2018
-~df: 11 November 2018
-~dz: 2021-10-08 20:16:58
-~ti: 11:25:05
-~dt: 07-06-2020 13:38:16
-~dft: 07 June 2020 13:39:26
+~da: 30-12-2018 / dd-mm-yyyy
+~df: 30 December 2018 / dd-Month-yyyy
+~dz: 2018-12-30 20:16:58 / yyyy-mm-dd hh:mm:ss
+~tt: 20:16:58 / hh:mm:ss
+~tr: 20:16 / hh:mm
+~dt: 30-12-2018 20:16:58 / dd-mm-yyyy hh:mm:ss
+~dft: 30 December 2018 20:16:58 / dd Month yyyy hh:mm:ss
 ```
 
 ##### =todo / =fixme / =hack / =note
