@@ -2,64 +2,78 @@
   <img width="150" height="auto" src="harbinger.png">
 </p>
 
-<p align="center"><b>H A R B I N G E R</b></p>
+<h1 align="center"><b>H A R B I N G E R</b></h1>
 
----
 
 An AHK script that provides some quality of life shortcuts.
 
-Current Version: 1.5
+> [!CAUTION]
+> As of Harbinger v2.0.0, Harbinger requires AutoHotkey v2.0+.
+
+
+Current Version: 2.0.0
 <br>
-Authored Date: 15-10-2017
+Authored Date: 1.0.0 - OCT-15-2017
 <br>
-Last Update: 12-10-2021
+Last Update: 2.0.0 - NOV-29-2025
 <br>
 <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank"><b>Releases</b></a>
 <br>
 <br>
 
----
 
-##### Installation:
+## Installation 🧑‍💻
 
 1. Download <a href="https://autohotkey.com/" target="_blank">AutoHotkey</a>
 2. <a href="https://github.com/tdwoodman/harbinger/releases" target="_blank">Download Harbinger</a>
 3. Double click "harbinger.ahk"
+4. You may want to set up as a task so you don't have to manually double-click the script every time you log on. See below
 
----
 
-##### Task Scheduling:
-1. Open Task Scheduler by pressing `Windows Key + R`, typing `control schedtasks`, and pressing `Enter`.
-2. Click `Create Task` in the right sidebar.
+## Set up as a Task 📝
+
+### Automatic via Batch Script 🤖
+
+> [!WARNING]
+> You should READ and understand the batch script prior to running. Never run someone elses scripts blindly 👍
+> ***This script requires admin privileges***
+
+Run the **create_harbinger_task.bat** script to automatically create a task and put the script in a persistent location, `%LOCALAPPDATA%\HarbingerAHK\harbinger.ahk`. The batch script creates a task that uses basically all defaults, except it runs the script at user logon and once after creating the task.
+
+You can verify the task was created by opening Task Scheduler and looking for "HarbingerAHK_OnLogon" in the task library.
+
+### Manual via Task Scheduler 🙋‍♀️
+1. Open Task Scheduler by searching, or by pressing `Windows Key + R`, typing `control schedtasks`, and pressing `Enter`
+2. Click `Create Task` in the right sidebar
 3. Name it anything you want
 4. Check `Run whether user is logged on or not`
-5. Check `Run with highest privileges`
-6. Click the dropdown called `Configure for` and select `Windows 10`
-7. Click the `Triggers` tab at the top
-8. Click `New...`
-9. Add triggers for whenever you want the script to run. Mine are:
+5. Click the dropdown called `Configure for` and select `Windows 10`
+6. Click the `Triggers` tab at the top
+7. Click `New...`
+8. Add triggers for whenever you want the script to run. Mine are:
     - At log on
     - On workstation unlock
-10. On all triggers, make sure `Enabled` is CHECKED.
-11. Click the `Actions` tab at the top
-12. Make sure the dropdown says `Start a program`
-13. Click `Browse...` and browse to harbinger.ahk, click `Open` and `OK`
-14. Click the `Conditions` tab at the top
-15. UNCHECK `Start the task only if the computer is on AC power`
-16. Click the `Settings` tab at the top
-17. UNCHECK `Stop the task if it runs longer than`
-18. At the bottom in the dropdown you can either select:
+9. On all triggers, make sure `Enabled` is CHECKED
+10. Click the `Actions` tab at the top
+11. Make sure the dropdown says `Start a program`
+12. Click `Browse...` and browse to harbinger.ahk, click `Open` and `OK`
+13. Click the `Conditions` tab at the top
+14. UNCHECK `Start the task only if the computer is on AC power`
+15. Click the `Settings` tab at the top
+16. UNCHECK `Stop the task if it runs longer than`
+17. At the bottom in the dropdown you can either select:
     - `Do not start a new instance` or
     - `Stop the existing instance`
 
----
 
-##### Config:
+## Post-Setup Config 🛠️
 
-1. Open harbinger.ahk with your favourite editor
-2. Replace the "USERNAME" variable in the *CONFIG* part of the .ahk script.
+The TODO/FIXME/HACK/NOTE comments all use the AHK variable "A_UserName" to insert your username, this uses your Windows logon name.
 
----
+If you want to change this, you should modify the script (located at `%LOCALAPPDATA%\HarbingerAHK\harbinger.ahk` if you ran the batch script) to use a different name.
+
+
+## Commands & Hotkeys ⌨️
 
 Command | Result
 ---- | ----
@@ -77,7 +91,6 @@ Command | Result
 =hack | Insert HACK comment
 =note | Insert NOTE comment
 
----
 
 Hotkey | Result
 ---- | ----
@@ -87,9 +100,8 @@ Alt+Right | End (move cursot to end of line)
 Alt+Shift+Left | Select+Home (select all text from cursor position to beginning of line)
 Alt+Shift+Right | Select+End (select all text from cursor position to end of line)
 
----
 
-# Examples
+## Examples ✍️
 
 ##### ~da / ~df / ~dz / ~ti / ~dt / ~dft
 ```
@@ -106,5 +118,3 @@ Alt+Shift+Right | Select+End (select all text from cursor position to end of lin
 ```
 // XXXX(USERNAME):
 ```
-
----
